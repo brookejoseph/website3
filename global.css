@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        rgba(var(--background-start-rgb), 0),
+        rgba(var(--background-end-rgb), 1)
+      );
+  }
+  
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* styles.css */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f7f3f9;
+    color: #333;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+  }
+  
+.relative-flex {
+  position: relative;
+  display: flex;
+  height: 500px;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: var(--background);
+}
+  
+  .gradient-text {
+    pointer-events: none;
+    white-space: pre-wrap;
+    background: linear-gradient(to bottom, #e9d5ff, #ffcccc);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 6rem; /* equivalent to text-8xl */
+    font-weight: 600; /* equivalent to font-semibold */
+    line-height: 1; /* equivalent to leading-none */
+  }
+  
+  .particles-absolute {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+  }
+  
